@@ -1,0 +1,10 @@
+/* V22 calendar + read-only skills */
+.calendar-toolbar{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px}
+.calendar-week,.calendar-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+.calendar-week{margin:10px 0;color:var(--muted);text-align:center}
+.calendar-grid .day{min-height:58px;padding:6px;border:1px solid var(--border);border-radius:10px;background:var(--panel)}
+.calendar-grid .day.today{outline:2px solid var(--accent);box-shadow:0 0 12px rgba(66,245,179,.15)}
+.calendar-grid .day.empty{opacity:.2}
+.event-dot{font-size:.65rem;color:var(--accent2);margin-top:5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.skill-progress{height:8px;background:var(--panel2);border-radius:999px;overflow:hidden;margin-top:8px}
+.skill-progress span{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));border-radius:inherit}

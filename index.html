@@ -1,0 +1,88 @@
+<!doctype html><html lang="ht"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#0b2e20"><meta name="description" content="SCOUT HUB ONLINE — Scout group management and communication"><link rel="manifest" href="manifest.json"><link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/responsive.css"><link rel="stylesheet" href="css/animations.css"><link rel="stylesheet" href="css/auth-v8.css"><link rel="stylesheet" href="css/v22-mobile.css"><link rel="stylesheet" href="css/v23-messages.css"><link rel="stylesheet" href="css/v25-media.css"><link rel="stylesheet" href="css/v22-features.css"><link rel="stylesheet" href="css/v26-grade-selector.css"><link rel="stylesheet" href="css/v26-creator-admin.css"><link rel="stylesheet" href="css/v30-modern.css"><script src="https://cdn.jsdelivr.net/npm/tus-js-client@4/dist/tus.min.js"></script><title>SCOUT HUB ONLINE</title><!-- SCOUT HUB V5 BEAUTIFUL REGISTER -->
+</head>
+<body class="scout-loading"><div id="splashScreen" class="splash-screen"><div class="splash-orbit"><span class="splash-compass">🧭</span></div><h1>SCOUT HUB</h1><p>Òganize • Aprann • Sèvi</p><div class="splash-loader"><i></i></div></div><div id="app">
+<header class="topbar"><div><div class="brand">🏕️ SCOUT HUB</div><small id="subtitle">Òganize • Aprann • Sèvi</small></div><div class="top-actions"><span id="connectionStatus" class="status-pill">Offline</span><button id="quickSignupBtn" class="signup-top-btn" type="button">✨ Enskri</button><button id="themeBtn" class="icon-btn" aria-label="Theme">🌙</button></div></header>
+<main id="main" tabindex="-1">
+<section id="home" class="page active">
+  <div class="hero"><div class="hero-icon">⚜️</div><span class="v30-kicker">SCOUT HUB</span><h1>Bon retou, Scout 👋</h1><p>Tout sa ou bezwen, san w pa pèdi nan twòp meni.</p><span id="modeBadge" class="status-pill">Offline</span></div>
+  <div class="v30-home-grid">
+    <section class="v30-focus-card"><span class="v30-kicker">🎯 JODI A</span><h2>Ki sa w vle fè?</h2><p class="muted">Aprann, jwe, kominike oswa òganize aktivite yo.</p><div class="v30-home-actions">
+      <button class="v30-home-action" data-action="learn"><span>📚</span><b>Aprann</b><small>Leson + recherche</small></button>
+      <button class="v30-home-action" data-action="games"><span>🎮</span><b>Jwe</b><small>Mini-jeux Scout</small></button>
+      <button class="v30-home-action" data-action="activities"><span>📅</span><b>Aktivite</b><small>Planifye</small></button>
+      <button class="v30-home-action" data-action="messages"><span>💬</span><b>Mesaj</b><small>Tan reyèl</small></button>
+    </div></section>
+    <section class="v30-progress-card"><span class="v30-kicker">🏆 PROGRESSION</span><h3>Kontinye avanti a</h3><p class="muted">Gade nivo, XP ak defi ou yo.</p><button class="primary-btn full" data-feature="progress">🏆 Gade pwogrè</button></section>
+  </div>
+  <div class="stats"><div class="stat-card"><span>👥</span><strong id="memberCount">0</strong><small>Manm</small></div><div class="stat-card"><span>📅</span><strong id="activityCount">0</strong><small>Aktivite</small></div><div class="stat-card"><span>🏅</span><strong id="badgeCount">0</strong><small>Badges</small></div><div class="stat-card"><span>📋</span><strong id="taskCount">0</strong><small>Tâches</small></div></div>
+  <section id="syncHealth" class="sync-health-card"><div class="sync-health-head"><div><strong>☁️ État du service</strong><small id="syncHealthText">Tcheke koneksyon...</small></div><button id="syncHealthBtn" class="secondary-btn" type="button">Teste</button></div><div class="sync-health-grid"><span>Internet: <b id="shInternet">—</b></span><span>Supabase: <b id="shSupabase">—</b></span><span>Session: <b id="shSession">—</b></span><span>Realtime: <b id="shRealtime">—</b></span><span>Cloud: <b id="shMembers">—</b></span><span>Local: <b id="shLocal">—</b></span></div><p class="muted" id="shTwoPhones">Teste 2 telefòn nan Sync Health si sa nesesè.</p></section>
+  <section class="quick-access-section"><div class="quick-access-heading"><div><span class="quick-kicker">⚡ RAPID</span><h2 id="quickAccessTitle">Aksè rapid</h2><p>4 zouti ki pi itil yo.</p></div><span class="quick-live">● LIVE</span></div><div class="quick-actions quick-actions-pro">
+    <button class="quick-card" data-feature="lessons"><span class="quick-card-icon">📚</span><span class="quick-card-title">Leson</span><span class="quick-card-sub">Aprann + rechèch</span></button>
+    <button class="quick-card" data-action="games"><span class="quick-card-icon">🎮</span><span class="quick-card-title">Jwèt</span><span class="quick-card-sub">Aprann pandan w jwe</span></button>
+    <button class="quick-card" data-feature="tasks"><span class="quick-card-icon">📋</span><span class="quick-card-title">Tâches</span><span class="quick-card-sub">Misyon</span></button>
+    <button class="quick-card" data-feature="music"><span class="quick-card-icon">🎶</span><span class="quick-card-title">Mizik</span><span class="quick-card-sub">Scout Music</span></button><button id="aiQuickAction" class="quick-card" data-feature="ai"><span class="quick-card-icon">🤖</span><span class="quick-card-title">Scout IA</span><span class="quick-card-sub">Online + offline</span></button>
+  </div><div class="quick-footer"><span id="scoutProgressMini">⭐ Progression</span><button class="quick-mini" data-action="more">☰ Tout zouti</button></div></section>
+</section>
+<section id="learn" class="page"><div id="learningHub"></div></section>
+<section id="members" class="page"><div class="page-header"><div><h1>👥 Manm</h1><p>Jere manm gwoup la.</p></div><button class="primary-btn" data-action="new-member">+ Ajoute</button></div><input id="memberSearch" class="search" type="search" placeholder="🔎 Chèche yon manm..."><div id="memberList" class="list"></div></section>
+<section id="activities" class="page"><div class="page-header"><div><h1>📅 Aktivite</h1><p>Planifye aktivite Scout yo.</p></div><button class="primary-btn" data-action="new-activity">+ Ajoute</button></div><div id="activityList" class="list"></div></section>
+<section id="games" class="page"><div class="page-header"><div><h1>🎮 Jwèt</h1><p>Jwèt ak zouti Scout verifye.</p></div></div><div id="gamesList" class="games-grid"></div></section>
+<section id="messages" class="page messages-page">
+  <div class="page-header messages-page-header">
+    <div>
+      <h1>💬 Mesaj</h1>
+      <p id="chatSubtitle">Eksplore mesaj yo san kont. Konekte pou voye yon mesaj.</p>
+    </div>
+    <button type="button" class="chat-refresh-btn" id="chatRefreshBtn" title="Rafrechi manm yo">↻</button>
+  </div>
+
+  <div class="chat-layout chat-layout-modern">
+    <aside id="conversationList" class="conversation-list"></aside>
+
+    <section class="chat-panel">
+      <div class="chat-header chat-header-modern">
+        <div class="chat-avatar" id="chatAvatar">💬</div>
+        <div class="chat-header-copy">
+          <strong id="chatHeader">Chwazi yon manm</strong>
+          <small id="chatPresence">Pa gen konvèsasyon chwazi</small>
+        </div>
+      </div>
+
+      <div id="chatMessages" class="chat-messages"></div>
+
+      <div class="chat-composer-wrap">
+        <form id="chatForm" class="chat-form chat-form-modern">
+          <button type="button" class="chat-tool-btn" id="imagePickerBtn" aria-label="Voye imaj">＋</button><button type="button" class="chat-tool-btn chat-ai-btn" id="chatAiBtn" aria-label="Scout IA">🤖</button>
+          <input id="chatInput" maxlength="2000" autocomplete="off" placeholder="Ekri yon mesaj... (koneksyon obligatwa pou voye)">
+          <button type="submit" class="chat-send-btn" aria-label="Voye mesaj">➤</button>
+        </form>
+
+        <div class="media-actions chat-media-actions">
+          <label class="media-btn modern-media-btn" title="Voye foto, videyo oswa fichye">
+            📎 <span>Fichye</span>
+            <input id="imageInput" type="file"
+              accept="image/*,video/*,audio/*,.pdf,.txt,.zip,.doc,.docx,.xls,.xlsx,.ppt,.pptx"
+              hidden>
+          </label>
+          <button id="recordBtn" type="button" class="media-btn modern-media-btn" disabled>🎙️ <span>Vwa</span></button>
+          <span id="recordTime" class="record-time"></span>
+          <span class="media-limit">FICHYE / VIDÉO — LIMIT DOSYE SUPABASE</span>
+        </div>
+        <div id="mediaPreview" class="media-preview"></div>
+      </div>
+    </section>
+  </div>
+</section>
+<section id="more" class="page"><div class="page-header"><div><h1>☰ Plis</h1><p>Tout zouti SCOUT HUB yo.</p></div></div><div class="menu-list-scroll"><div class="menu-list menu-list-vertical"><button data-feature="morse">📡 <span>Kòd Mòs</span><b>›</b></button><button data-feature="music">🎶 <span>Mizik</span><b>›</b></button><button data-action="learn">📚 <span>Academy / Leson</span><b>›</b></button><button data-feature="badges">🏅 <span>Badges</span><b>›</b></button><button data-feature="skills">🎯 <span>Compétences</span><b>›</b></button><button data-feature="tasks">📋 <span>Tâches</span><b>›</b></button><button data-feature="calendar">📆 <span>Calendrier</span><b>›</b></button><button data-feature="announcements">📢 <span>Annonces</span><b>›</b></button><button data-feature="notifications">🔔 <span>Notifications</span><b>›</b></button><button data-feature="ai">🤖 <span>Scout IA</span><b>›</b></button><button data-feature="profile">👤 <span>Profil</span><b>›</b></button><button data-feature="progress">🏆 <span>Progression</span><b>›</b></button><button data-feature="patrols">🏕️ <span>Patwouy</span><b>›</b></button><button data-feature="challenges">🎯 <span>Défis</span><b>›</b></button><button data-feature="dashboard">📊 <span>Dashboard</span><b>›</b></button><button data-feature="audit">🧾 <span>Journal</span><b>›</b></button><button data-feature="connection">🌐 <span>Connexion serveur</span><b>›</b></button><button data-feature="backup">💾 <span>Backup</span><b>›</b></button><button data-feature="restore">📥 <span>Restore</span><b>›</b></button><button data-feature="language">🌐 <span>Langue</span><b>›</b></button><button data-feature="account">🔐 <span>Kont</span><b>›</b></button><button id="creatorFeatureBtn" hidden>👑 <span>Créateur</span><b>›</b></button><button data-feature="about">ℹ️ <span>About</span><b>›</b></button></div></div><div class="danger-zone"><h3>⚠️ Zòn danje</h3><button id="deleteAllBtn" class="danger-btn">🗑️ Efase tout done</button></div></section>
+</main><nav class="bottom-nav" aria-label="Navigation"><button class="nav-btn active" data-action="home">🏠<span>Akèy</span></button><button class="nav-btn" data-action="learn">📚<span>Aprann</span></button><button class="nav-btn" data-action="games">🎮<span>Jwèt</span></button><button class="nav-btn" data-action="messages">💬<span>Mesaj</span></button><button class="nav-btn" data-action="more">☰<span>Plis</span></button></nav>
+<div id="modal" class="modal hidden" role="dialog" aria-modal="true"><div class="modal-card"><button id="modalClose" class="close-btn">×</button><div id="modalBody"></div></div></div><div id="toast" class="toast" role="status" aria-live="polite"></div></div>
+<script src="js/utils.js"></script><script src="js/roles.js"></script><script src="js/config.js"></script><script src="js/supabaseClient.js"></script><script src="js/syncEngine.js"></script><script src="js/storage.js"></script><script src="js/api.js"></script><script src="js/navigation.js"></script><script src="js/auth.js"></script><script src="js/members.js"></script><script src="js/activities.js"></script><script src="js/games.js"></script><script src="js/chat.js"></script><script src="js/offlineDirect.js"></script><script src="js/syncHealth.js"></script><script src="js/media.js"></script><script src="js/voice.js"></script><script src="js/lessons.js"></script><script src="js/morse.js"></script><script src="js/sound.js"></script><script src="js/music.js"></script><script src="js/authGate.js"></script><script src="js/badgeEngine.js"></script><script src="js/features.js"></script><script src="js/creator.js"></script><script src="js/scoutHubPlus.js"></script><script src="js/settings.js"></script><script src="js/translations.js"></script><script src="js/app.js"></script><script>window.SCOUT_VAPID_PUBLIC_KEY=window.SCOUT_VAPID_PUBLIC_KEY||''; if('serviceWorker' in navigator) navigator.serviceWorker.register('service-worker.js').catch(console.warn);</script>
+<script src="js/auth-recovery.js"></script><script src="js/supabaseLiveUI.js"></script>
+<script src="js/realtimeAutomation.js"></script>
+<script src="js/v12Core.js"></script><script src="js/v30-ui.js"></script><script src="js/scoutAI.js"></script><script src="js/pushNotifications.js"></script>
+<script>
+window.addEventListener('scout:daily-calendar',e=>{const n=e.detail?.events?.length||0;const x=document.getElementById('v12TodayCount');if(x)x.textContent=n===1?'1 aktivite':n+' aktivite';});
+window.addEventListener('scout:alert',()=>{const x=document.getElementById('v12AlertState');if(x){x.textContent='NOUVO ANONS';x.classList.add('is-live');}});
+window.addEventListener('scout:message-local',e=>{const x=document.getElementById('v12MessageState');if(x)x.textContent=e.detail?.status==='pending'?'QUEUED':'SENT';});
+window.addEventListener('scout:offline-queue',e=>{const x=document.getElementById('v12MessageState');if(x){const n=e.detail?.count||0;x.textContent=n?`QUEUED • ${n}`:'READY';}});
+</script></body></html>

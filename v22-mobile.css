@@ -1,0 +1,8 @@
+/* V22 MOBILE-FIRST — keeps the V14 visual system, only constrains layout */
+html{width:100%;max-width:100%;overflow-x:hidden}
+body{width:100%;max-width:100%;min-width:0;overflow-x:hidden}
+#app{width:100%;max-width:480px;min-width:0;margin:0 auto;min-height:100dvh;overflow-x:hidden}
+main#main{width:100%;max-width:480px;min-width:0;overflow-x:hidden}
+.page{width:100%;max-width:480px;min-width:0;margin:0 auto;box-sizing:border-box;overflow-x:hidden}
+@media(min-width:700px){body{display:flex;justify-content:center;align-items:flex-start;background:var(--bg,#071812)}#app{box-shadow:0 0 50px rgba(0,0,0,.35);min-height:100vh}}
+@media(max-width:480px){.page{padding-left:12px;padding-right:12px}.topbar{padding-left:12px;padding-right:12px}.stats{gap:8px}.quick-actions{gap:8px}}
